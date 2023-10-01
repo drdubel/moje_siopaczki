@@ -1,0 +1,9 @@
+*
+!*.pdf
+!*.tex
+!*.in
+!*.out
+!*.py
+!*.cpp
+!*/
+!.gitignore
