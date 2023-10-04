@@ -1,0 +1,99 @@
+\setuppagenumbering[location=none]
+
+\definefontfamily [droid] [mono] [Droid Sans Mono]
+
+\setuplayout
+    [
+        topspace=15pt,
+        header=10pt,
+    ]
+
+\definehead
+    [title]
+    [section]
+
+\setuphead
+    [title]
+    [
+        align=center,
+        style={\bfd\it},
+        before={\blank[none]},
+        after={\blank[none]},
+        number=no,
+        page=no,
+        header=empty,
+    ]
+
+\setuphead
+    [section]
+    [
+        number=no,
+    ]
+
+\starttext
+\midaligned{\externalfigure[pangular2.pdf][height=2.5cm]}
+\blackrule[width=\textwidth, height=1pt]
+\framed[frame=no, align=left]{\setupbodyfont[9pt] Dostępna pamięć: 64MB} \hfill
+\framed[frame=no, align=center]{\setupbodyfont[9pt] Limit czasu: 1s} \hfill
+\framed[frame=no, align=right]{\setupbodyfont[9pt] 4.10.2023}
+
+\blank[big]
+
+\title{Szachy}
+
+\blank[2*big]
+
+Odpowiedz na zapytania dla podanych na wejściu standardowym plansz.
+
+\startsection
+    [
+        title={\bf Wejście},
+        bookmark={Wyjście},
+    ]
+
+W pierwszej linii wejścia znajduje się jedna liczba całkowita $$n\hskip .5em(-10^3 \leq n \leq 10^3)$$.
+\stopsection
+
+\startsection
+    [
+        title={\bf Wyjście},
+        bookmark={Wyjście},
+    ]
+
+Napisz $$n$$ linii zawierających \quotation{Hello world}.
+\stopsection
+
+\startsection
+    [
+        title={\bf Przykład},
+        bookmark={Przykłady},
+    ]
+
+\startcolumns[n=2]
+\framed[frame=on, align=normal, width=\textwidth]{\tt
+    \hskip .1em 2
+}{\setupbodyfont[9pt] Wejście dla testu $$sza0$$}
+
+\framed[frame=on, align=normal, width=\textwidth]{\tt
+    \hskip .1em Hello world\\
+    \hskip .1em Hello world
+}{\setupbodyfont[9pt] Wyjście dla testu $$sza0$$}
+\stopcolumns
+
+\startcolumns[n=2]
+\framed[frame=on, align=normal, width=\textwidth]{\tt
+    \hskip .1em 6
+}{\setupbodyfont[9pt] Wejście dla testu $$sza1a$$}
+
+\framed[frame=on, align=normal, width=\textwidth]{\tt
+    \hskip .1em Hello world\\
+    \hskip .1em Hello world\\
+    \hskip .1em Hello world\\
+    \hskip .1em Hello world\\
+    \hskip .1em Hello world\\
+    \hskip .1em Hello world
+}{\setupbodyfont[9pt] Wyjście dla testu $$sza1a$$}
+\stopcolumns
+
+\stopsection
+\stoptext
